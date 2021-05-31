@@ -1,0 +1,8 @@
+﻿  Source.cpp
+C:\Users\Mino\source\repos\Internship_finder\Internship_finder\Source.cpp(34,4): error C3861: 'technology': identifier not found
+C:\Users\Mino\source\repos\Internship_finder\Internship_finder\Source.cpp(137,4): error C3861: 'mtc': identifier not found
+C:\Users\Mino\source\repos\Internship_finder\Internship_finder\Source.cpp(140,4): error C3861: 'wedesign': identifier not found
+C:\Users\Mino\source\repos\Internship_finder\Internship_finder\Source.cpp(143,4): error C3861: 'telecom': identifier not found
+C:\Users\Mino\source\repos\Internship_finder\Internship_finder\Source.cpp(146,4): error C3861: 'UNDPTech': identifier not found
+C:\Users\Mino\source\repos\Internship_finder\Internship_finder\Source.cpp(149,4): error C3861: 'SADCTech': identifier not found
+C:\Users\Mino\source\repos\Internship_finder\Internship_finder\Source.cpp(152,4): error C3861: 'vadoTech': identifier not found
