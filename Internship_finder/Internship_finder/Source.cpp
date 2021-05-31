@@ -7,6 +7,10 @@ using namespace std;
 using std::cout;
 using std::cin;
 
+//Global declarations
+int option;
+void optionField();
+
 
 //Different fields
 
@@ -821,6 +825,8 @@ void technology() {
 	cout << " ==========================================" << endl;
 }
 //..............................
+//================================
+
 void optionField() {
 
 
@@ -872,6 +878,7 @@ void optionField() {
 
 }
 
+
 //static allocation of memory
 class MyClass {
 public:
@@ -903,8 +910,17 @@ void PrintName(University* university)
 {
 	std::cout << university->GetName() << std::endl;
 }
+T data_display(T a, T b) {
+	T result = a * b;
+	return result;
+}
+
 int main()
 {
+
+	//stl implementation
+	int x = data_display<int>(10.5, 5);
+	cout << x << " , " << endl;
 //virtual method
 		University university; University* a = new University();
 		university.GetName(); std::cout << a->GetName() << std::endl;
