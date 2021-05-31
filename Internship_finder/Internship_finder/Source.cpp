@@ -1029,8 +1029,37 @@ Greeting::~Greeting(void) {
 	cout << "Have A Good Day!" << endl;
 	delete ptr;
 }
- int main ()
 
+//stl implementation
+template <typename T>
+
+T data_display(T a, T b) {
+	T result = a * b;
+	return result;
+}
+ int main ()
+//stl implementation
+ {
+		int x = data_display<int>(10.5, 5);
+		cout << x << " , " << endl;
+
+		//virtual method
+		University university; University* a = new University();
+		university.GetName(); std::cout << a->GetName() << std::endl;
+
+		Campus* c = new Campus("Windhoek");
+		std::cout << c->GetName() << std::endl;
+		std::cout << "Hello please type in your Name:\n";
+		std::cin.get();
+		
+	};
+
+	{
+		// static allocation of memory for subjects printing
+		std::cout << "/Make sure to include this subjects in your grades/ ";
+		std::cout << MyClass::enumText[0] << std::endl;
+		
+	};
 {
 
         //Prompt method
