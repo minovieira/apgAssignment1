@@ -926,3 +926,124 @@ int main()
 	return 0;
 
 }
+
+class Person {
+
+public:
+        string Name;
+        string Surname;
+
+        void Prompt() {
+                cout << "---------------------------------\n";
+                cin >> Name;
+
+                cout << "Hello please type in your Surname:\n";
+                cin >> Surname;
+
+                cout << "Welcome: " << Name << " " << Surname << endl;
+
+                //pointer decleration
+                int age;
+                std::cout << "Please enter your Age:\n";
+                cin >> age;
+                std::cout << "this is the memory address of age\n";
+                std::cout << &age << endl;
+
+                int* agePointer;
+                agePointer = &age;
+
+                cout << agePointer << endl;
+
+                //pointer decleration
+                int year;
+                std::cout << "Please enter year of study:";
+                cin >> year;
+                std::cout << "this is the memory address of year";
+                std::cout << &year << endl;
+
+                int* yearPointer;
+                yearPointer = &year;
+
+                cout << yearPointer << endl;
+
+
+        }
+
+};
+
+
+class Description {
+
+public:
+        string Proceed;
+
+
+        void Options() {
+
+                cout << "\n\nThank for choosing Intership_Finder application,\nwe look forward in finding the right Internship for you" << endl;
+                cout << "Would you like to proceed click(Y/N): "; //still needs to include function for yes or no option
+                cin >> Proceed;
+        }
+
+
+};
+
+class Proceed_class : public Description {
+
+public:
+        void begin_Internship() {
+                cout << "All the best in finding your Internship\n\n";
+
+        }
+
+
+};
+class Greeting {
+
+public:
+
+	Greeting(int de);             // this is a constructor
+	Greeting(const Greeting& obj);  // this is a copy constructor
+	~Greeting();
+
+public:
+	int* ptr;
+};
+
+// Member functions definitions including constructor
+Greeting::Greeting(int de) {
+	cout << "Goodluck!" << endl;
+
+	// memory for the pointer;
+	ptr = new int;
+	*ptr = de;
+}
+
+Greeting::Greeting(const Greeting& obj) {
+	cout << "Hope It Was Helpfull." << endl;
+	ptr = new int;
+	*ptr = *obj.ptr; // copy the value
+}
+
+Greeting::~Greeting(void) {
+	cout << "Have A Good Day!" << endl;
+	delete ptr;
+}
+ int main ()
+
+{
+
+        //Prompt method
+        Person p;
+        p.Prompt();
+
+        Proceed_class proceed_class_1;
+        proceed_class_1.Options();
+        proceed_class_1.begin_Internship();
+
+        optionField();
+};
+
+                return 0;
+}
+
