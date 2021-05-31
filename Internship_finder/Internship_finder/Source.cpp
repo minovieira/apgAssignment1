@@ -1,5 +1,11 @@
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <climits>
+
 using namespace std;
+using std::cout;
+using std::cin;
 
 
 //Different fields
@@ -281,6 +287,78 @@ void mtc() {
 	cout << "Duration 3 months " << endl;
 	cout << "  " << endl;
 	cout << " ==========================================" << endl;
+	
+	//file implementation
+	std::cout << "Enter the name of CV file you wish to create or append\n //note your filename should be your student No and end with .txt: ";
+	std::string filename;
+	std::cin >> filename;
+
+	std::ofstream cvfile;
+	// Creates and opens a text file
+	cvfile.open(filename.c_str(), std::ios::app);
+
+
+	if (cvfile.is_open()) {
+		std::cout << "(Success Opening File)\n\n";
+	}
+
+	std::string cv_message;
+	std::cout << "you are currently applying for this job, \ntype in your \nname: \nsurname: \nstudent_no: \nbackground: \nand other factors important for your CV application\n\n";
+	std::cin.ignore(INT_MAX, '\n');
+	std::getline(std::cin, cv_message);
+
+	//user input into file
+
+	cvfile << cv_message << std::endl;
+
+	cvfile.close();
+
+	//Dynamic allocation of memory
+	int grades_no;
+	int* ptr;
+
+	cout << "Enter the number of subjects you have this semester: " << endl;
+	cin >> grades_no;
+
+	ptr = new int[grades_no];
+	cout << "Enter all your result for this semester: " << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cin >> ptr[i];
+	}
+	cout << "Your Grade for this semester are:" << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cout << ptr[i] << endl;
+	}
+
+	//-----------------------------------------------------------
+
+	//cvfile << "This is the cv input file\n"; // this is writing outputting data to cvfile
+	 // Closes the file
+	std::cout << "\nSuccesfully wrote to file\n\n";
+	std::cout << "-----------------------------\n\n";
+	cvfile.close();
+
+	//reading from file
+	std::cout << "Your CV HAS Been compiled for Review and is saved, \nkindly wait a few days for response we will contact you for any feedback\n\n";
+
+	std::cout << "Here's a Review of your current compiled CV\n\n";
+	std::cout << "-----------------------------\n\n";
+
+	std::string fileText;
+
+	std::ifstream MyReadFile(filename.c_str());
+
+	while (getline(MyReadFile, fileText)) {
+
+		//outputting the text from the file
+		std::cout << fileText << std::endl;
+	}
+
+	//closing file
+	MyReadFile.close();
+	std::cout << "\n\n-----------------------------\n\n";
 }
 void wedesign() {
 
@@ -290,6 +368,78 @@ void wedesign() {
 	cout << "						   - -                        " << endl;
 	cout << "Spots available - 3 " << endl;
 	cout << "Duration 3 months " << endl;
+	
+	//file implementation
+	std::cout << "Enter the name of CV file you wish to create or append\n //note your filename should be your student No and end with .txt: ";
+	std::string filename;
+	std::cin >> filename;
+
+	std::ofstream cvfile;
+	// Creates and opens a text file
+	cvfile.open(filename.c_str(), std::ios::app);
+
+
+	if (cvfile.is_open()) {
+		std::cout << "(Success Opening File)\n\n";
+	}
+
+	std::string cv_message;
+	std::cout << "you are currently applying for this job, \ntype in your \nname: \nsurname: \nstudent_no: \nbackground: \nand other factors important for your CV application\n\n";
+	std::cin.ignore(INT_MAX, '\n');
+	std::getline(std::cin, cv_message);
+
+	//user input into file
+
+	cvfile << cv_message << std::endl;
+
+	cvfile.close();
+
+	//Dynamic allocation of memory
+	int grades_no;
+	int* ptr;
+
+	cout << "Enter the number of subjects you have this semester: " << endl;
+	cin >> grades_no;
+
+	ptr = new int[grades_no];
+	cout << "Enter all your result for this semester: " << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cin >> ptr[i];
+	}
+	cout << "Your Grade for this semester are:" << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cout << ptr[i] << endl;
+	}
+
+	//-----------------------------------------------------------
+
+	//cvfile << "This is the cv input file\n"; // this is writing outputting data to cvfile
+	 // Closes the file
+	std::cout << "\nSuccesfully wrote to file\n\n";
+	std::cout << "-----------------------------\n\n";
+	cvfile.close();
+
+	//reading from file
+	std::cout << "Your CV HAS Been compiled for Review and is saved, \nkindly wait a few days for response we will contact you for any feedback\n\n";
+
+	std::cout << "Here's a Review of your current compiled CV\n\n";
+	std::cout << "-----------------------------\n\n";
+
+	std::string fileText;
+
+	std::ifstream MyReadFile(filename.c_str());
+
+	while (getline(MyReadFile, fileText)) {
+
+		//outputting the text from the file
+		std::cout << fileText << std::endl;
+	}
+
+	//closing file
+	MyReadFile.close();
+	std::cout << "\n\n-----------------------------\n\n";
 }
 void telecom() {
 
@@ -299,6 +449,78 @@ void telecom() {
 	cout << "						   - -                        " << endl;
 	cout << "Spots available - 2 " << endl;
 	cout << "Duration 3 months " << endl;
+	
+	//file implementation
+	std::cout << "Enter the name of CV file you wish to create or append\n //note your filename should be your student No and end with .txt: ";
+	std::string filename;
+	std::cin >> filename;
+
+	std::ofstream cvfile;
+	// Creates and opens a text file
+	cvfile.open(filename.c_str(), std::ios::app);
+
+
+	if (cvfile.is_open()) {
+		std::cout << "(Success Opening File)\n\n";
+	}
+
+	std::string cv_message;
+	std::cout << "you are currently applying for this job, \ntype in your \nname: \nsurname: \nstudent_no: \nbackground: \nand other factors important for your CV application\n\n";
+	std::cin.ignore(INT_MAX, '\n');
+	std::getline(std::cin, cv_message);
+
+	//user input into file
+
+	cvfile << cv_message << std::endl;
+
+	cvfile.close();
+
+	//Dynamic allocation of memory
+	int grades_no;
+	int* ptr;
+
+	cout << "Enter the number of subjects you have this semester: " << endl;
+	cin >> grades_no;
+
+	ptr = new int[grades_no];
+	cout << "Enter all your result for this semester: " << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cin >> ptr[i];
+	}
+	cout << "Your Grade for this semester are:" << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cout << ptr[i] << endl;
+	}
+
+	//-----------------------------------------------------------
+
+	//cvfile << "This is the cv input file\n"; // this is writing outputting data to cvfile
+	 // Closes the file
+	std::cout << "\nSuccesfully wrote to file\n\n";
+	std::cout << "-----------------------------\n\n";
+	cvfile.close();
+
+	//reading from file
+	std::cout << "Your CV HAS Been compiled for Review and is saved, \nkindly wait a few days for response we will contact you for any feedback\n\n";
+
+	std::cout << "Here's a Review of your current compiled CV\n\n";
+	std::cout << "-----------------------------\n\n";
+
+	std::string fileText;
+
+	std::ifstream MyReadFile(filename.c_str());
+
+	while (getline(MyReadFile, fileText)) {
+
+		//outputting the text from the file
+		std::cout << fileText << std::endl;
+	}
+
+	//closing file
+	MyReadFile.close();
+	std::cout << "\n\n-----------------------------\n\n";
 }
 void UNDPTech() {
 
@@ -308,6 +530,78 @@ void UNDPTech() {
 	cout << "						   - -                        " << endl;
 	cout << "Spots available - 2 " << endl;
 	cout << "Duration 3 months " << endl;
+	
+	//file implementation
+	std::cout << "Enter the name of CV file you wish to create or append\n //note your filename should be your student No and end with .txt: ";
+	std::string filename;
+	std::cin >> filename;
+
+	std::ofstream cvfile;
+	// Creates and opens a text file
+	cvfile.open(filename.c_str(), std::ios::app);
+
+
+	if (cvfile.is_open()) {
+		std::cout << "(Success Opening File)\n\n";
+	}
+
+	std::string cv_message;
+	std::cout << "you are currently applying for this job, \ntype in your \nname: \nsurname: \nstudent_no: \nbackground: \nand other factors important for your CV application\n\n";
+	std::cin.ignore(INT_MAX, '\n');
+	std::getline(std::cin, cv_message);
+
+	//user input into file
+
+	cvfile << cv_message << std::endl;
+
+	cvfile.close();
+
+	//Dynamic allocation of memory
+	int grades_no;
+	int* ptr;
+
+	cout << "Enter the number of subjects you have this semester: " << endl;
+	cin >> grades_no;
+
+	ptr = new int[grades_no];
+	cout << "Enter all your result for this semester: " << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cin >> ptr[i];
+	}
+	cout << "Your Grade for this semester are:" << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cout << ptr[i] << endl;
+	}
+
+	//-----------------------------------------------------------
+
+	//cvfile << "This is the cv input file\n"; // this is writing outputting data to cvfile
+	 // Closes the file
+	std::cout << "\nSuccesfully wrote to file\n\n";
+	std::cout << "-----------------------------\n\n";
+	cvfile.close();
+
+	//reading from file
+	std::cout << "Your CV HAS Been compiled for Review and is saved, \nkindly wait a few days for response we will contact you for any feedback\n\n";
+
+	std::cout << "Here's a Review of your current compiled CV\n\n";
+	std::cout << "-----------------------------\n\n";
+
+	std::string fileText;
+
+	std::ifstream MyReadFile(filename.c_str());
+
+	while (getline(MyReadFile, fileText)) {
+
+		//outputting the text from the file
+		std::cout << fileText << std::endl;
+	}
+
+	//closing file
+	MyReadFile.close();
+	std::cout << "\n\n-----------------------------\n\n";
 }
 void SADCTech() {
 
@@ -317,6 +611,78 @@ void SADCTech() {
 	cout << "						   - -                        " << endl;
 	cout << "Spots available - 2 " << endl;
 	cout << "Duration 3 months " << endl;
+	
+	//file implementation
+	std::cout << "Enter the name of CV file you wish to create or append\n //note your filename should be your student No and end with .txt: ";
+	std::string filename;
+	std::cin >> filename;
+
+	std::ofstream cvfile;
+	// Creates and opens a text file
+	cvfile.open(filename.c_str(), std::ios::app);
+
+
+	if (cvfile.is_open()) {
+		std::cout << "(Success Opening File)\n\n";
+	}
+
+	std::string cv_message;
+	std::cout << "you are currently applying for this job, \ntype in your \nname: \nsurname: \nstudent_no: \nbackground: \nand other factors important for your CV application\n\n";
+	std::cin.ignore(INT_MAX, '\n');
+	std::getline(std::cin, cv_message);
+
+	//user input into file
+
+	cvfile << cv_message << std::endl;
+
+	cvfile.close();
+
+	//Dynamic allocation of memory
+	int grades_no;
+	int* ptr;
+
+	cout << "Enter the number of subjects you have this semester: " << endl;
+	cin >> grades_no;
+
+	ptr = new int[grades_no];
+	cout << "Enter all your result for this semester: " << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cin >> ptr[i];
+	}
+	cout << "Your Grade for this semester are:" << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cout << ptr[i] << endl;
+	}
+
+	//-----------------------------------------------------------
+
+	//cvfile << "This is the cv input file\n"; // this is writing outputting data to cvfile
+	 // Closes the file
+	std::cout << "\nSuccesfully wrote to file\n\n";
+	std::cout << "-----------------------------\n\n";
+	cvfile.close();
+
+	//reading from file
+	std::cout << "Your CV HAS Been compiled for Review and is saved, \nkindly wait a few days for response we will contact you for any feedback\n\n";
+
+	std::cout << "Here's a Review of your current compiled CV\n\n";
+	std::cout << "-----------------------------\n\n";
+
+	std::string fileText;
+
+	std::ifstream MyReadFile(filename.c_str());
+
+	while (getline(MyReadFile, fileText)) {
+
+		//outputting the text from the file
+		std::cout << fileText << std::endl;
+	}
+
+	//closing file
+	MyReadFile.close();
+	std::cout << "\n\n-----------------------------\n\n";
 }
 void vadoTech() {
 
@@ -326,6 +692,78 @@ void vadoTech() {
 	cout << "						   - -                        " << endl;
 	cout << "Spots available - 2 " << endl;
 	cout << "Duration 3 months " << endl;
+	
+	//file implementation
+	std::cout << "Enter the name of CV file you wish to create or append\n //note your filename should be your student No and end with .txt: ";
+	std::string filename;
+	std::cin >> filename;
+
+	std::ofstream cvfile;
+	// Creates and opens a text file
+	cvfile.open(filename.c_str(), std::ios::app);
+
+
+	if (cvfile.is_open()) {
+		std::cout << "(Success Opening File)\n\n";
+	}
+
+	std::string cv_message;
+	std::cout << "you are currently applying for this job, \ntype in your \nname: \nsurname: \nstudent_no: \nbackground: \nand other factors important for your CV application\n\n";
+	std::cin.ignore(INT_MAX, '\n');
+	std::getline(std::cin, cv_message);
+
+	//user input into file
+
+	cvfile << cv_message << std::endl;
+
+	cvfile.close();
+
+	//Dynamic allocation of memory
+	int grades_no;
+	int* ptr;
+
+	cout << "Enter the number of subjects you have this semester: " << endl;
+	cin >> grades_no;
+
+	ptr = new int[grades_no];
+	cout << "Enter all your result for this semester: " << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cin >> ptr[i];
+	}
+	cout << "Your Grade for this semester are:" << endl;
+	for (int i = 0; i < grades_no; i++)
+	{
+		cout << ptr[i] << endl;
+	}
+
+	//-----------------------------------------------------------
+
+	//cvfile << "This is the cv input file\n"; // this is writing outputting data to cvfile
+	 // Closes the file
+	std::cout << "\nSuccesfully wrote to file\n\n";
+	std::cout << "-----------------------------\n\n";
+	cvfile.close();
+
+	//reading from file
+	std::cout << "Your CV HAS Been compiled for Review and is saved, \nkindly wait a few days for response we will contact you for any feedback\n\n";
+
+	std::cout << "Here's a Review of your current compiled CV\n\n";
+	std::cout << "-----------------------------\n\n";
+
+	std::string fileText;
+
+	std::ifstream MyReadFile(filename.c_str());
+
+	while (getline(MyReadFile, fileText)) {
+
+		//outputting the text from the file
+		std::cout << fileText << std::endl;
+	}
+
+	//closing file
+	MyReadFile.close();
+	std::cout << "\n\n-----------------------------\n\n";
 }
 void technology() {
 
