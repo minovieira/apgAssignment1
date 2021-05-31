@@ -871,9 +871,57 @@ void optionField() {
 	} while (option != 5);
 
 }
+
+//static allocation of memory
+class MyClass {
+public:
+	const static char* enumText[];
+};
+
+const char* MyClass::enumText[] = { "English", "Mathmatics\n" };
+
+//virtual class decleration
+class University
+{
+public:
+	virtual std::string GetName() { return "Nust"; }
+};
+
+class Campus : public University
+{
+private:
+	std::string y_Name;
+public:
+	Campus(const std::string& name)
+		: y_Name(name) {}
+
+	std::string GetName() override { return y_Name; }
+
+};
+
+void PrintName(University* university)
+{
+	std::cout << university->GetName() << std::endl;
+}
 int main()
 {
+//virtual method
+		University university; University* a = new University();
+		university.GetName(); std::cout << a->GetName() << std::endl;
 
+		Campus* c = new Campus("Windhoek");
+		std::cout << c->GetName() << std::endl;
+		std::cout << "Hello please type in your Name:\n";
+		std::cin.get();
+		
+	};
+
+	{
+		// static allocation of memory for subjects printing
+		std::cout << "/Make sure to include this subjects in your grades/ ";
+		std::cout << MyClass::enumText[0] << std::endl;
+		
+	};
 	optionField();
 	return 0;
 
